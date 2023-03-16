@@ -1,0 +1,15 @@
+{{> header }}
+
+<h1>All Presents</h1>
+
+<ul>
+  {{#each presents}}
+    <li>
+      <h2>{{name}}</h2>
+      <img src="{{image}}" alt="{{name}}" style="width: 200px;">
+      <p><a href="/presents/{{_id}}">View details</a></p>
+    </li>
+  {{/each}}
+</ul>
+
+{{> footer }}
