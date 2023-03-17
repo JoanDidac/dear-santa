@@ -1,15 +1,19 @@
 {{> header }}
+<div class="content-container">
+<h1 id="presents-title ">All Presents</h1>
 
-<h1>All Presents</h1>
-
-<ul>
+<div class="card-container">
   {{#each presents}}
-    <li>
-      <h2>{{name}}</h2>
-      <img src="{{image}}" alt="{{name}}" style="width: 200px;">
-      <p><a href="/presents/{{_id}}">View details</a></p>
-    </li>
+    <div class="card">
+      <div class="card-content">
+        <h2>{{name}}</h2>
+        <img src="{{image}}" alt="{{name}}" class="card-img">
+        <p><a href="/presents/{{_id}}">View details</a></p>
+        <p><a href="/presents/delete/{{_id}}" class="delete-button">Delete</a></p>
+      </div>
+    </div>
   {{/each}}
-</ul>
+</div>
+</div>
 
 {{> footer }}

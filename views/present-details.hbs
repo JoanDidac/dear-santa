@@ -1,13 +1,62 @@
-{{> header }}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Presents Detail</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+  {{> header }}
+  <div class="page-container"> 
+    <div class="snowflakes">
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div> 
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake" style="animation-duration: 5s; animation-delay: 0s;"></div>
+      <div class="snowflake" style="animation-duration: 6s; animation-delay: 1s;"></div>
+      <div class="snowflake" style="animation-duration: 4s; animation-delay: 2s;"></div>
+      <div class="snowflake" style="animation-duration: 3s; animation-delay: 4s;"></div>
+      <div class="snowflake" style="animation-duration: 2s; animation-delay: 5s;"></div>
+      <div class="snowflake" style="animation-duration: 8s; animation-delay: 2s;"></div>
+    </div>
 
-<h1>{{present.name}}</h1>
-<img src="{{present.image}}" alt="{{present.name}}" style="width: 200px;">
-<p>Price: {{present.price}}</p>
-<p>Recipient: {{present.recipient}}</p>
-<p>Description: {{present.description}}</p>
+    <div class="details-container">
+      <h1>{{present.name}}</h1>
+      <img src="{{present.image}}" alt="{{present.name}}" style="width: 200px;">
+      <p>Price: {{present.price}}</p>
+      <p>Recipient: {{present.recipient}}</p>
+      <p>Description: {{present.description}}</p>
 
-<nav>
-  <a href="/presents">Back to presents list</a>
-</nav>
+      
 
-{{> footer }}
+      <nav>
+        <a href="/presents">Back to presents list</a>
+      </nav>
+    </div>
+     <a class="back-btn" href="/">⃔ Go back to homepage</a>
+  </div> 
+  {{> footer }}
+
+  <script>
+    // Number of snowflakes to create
+    const snowflakeCount = 50;
+
+    for (let i = 0; i < snowflakeCount; i++) {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.style.left = `${Math.random() * 100}vw`;
+      snowflake.style.animationDuration = `${3 + Math.random() * 5}s`;
+      snowflake.style.animationDelay = `${Math.random() * 5}s`;
+      snowflake.style.width = `${2 + Math.random() * 4}px`;
+      snowflake.style.height = snowflake.style.width;
+      document.querySelector('.snowflakes').appendChild(snowflake);
+    }
+  </script>
+
+</body>
+</html>

@@ -10,6 +10,21 @@ const presents = [
     description: 'Camión de Bomberos de la Patrulla Canina con Figura extraíble de Marshall el Dálmata de 15 cm '
   },
 
+  {
+    name: 'Transformers Optimus Prime',
+    image: 'https://m.media-amazon.com/images/I/71WzzLxOiPL._AC_SL1500_.jpg',
+    price: 120,
+    recipient: 'Didac',
+    description: 'Transformers Optimus Prime action figure with incredible detail and multiple points of articulation.'
+  },
+  {
+    name: 'Super Dupper Trouper',
+    image: 'https://www.leprechaun.es/24023-large_default/501st-battalion-clone-trooper-hot-toys-sw-the-clone-wars-figura-escala-16-30-cm.jpg',
+    price: 120,
+    recipient: 'Any TA',
+    description: 'Best story of the Century!!!!!!!!!!!!!!!!'
+  },
+
     {
         name: 'Lego Star Wars: Death Star',
         image: 'https://i.ebayimg.com/images/g/Wb4AAOSwuPdifpxC/s-l640.jpg',
@@ -41,4 +56,6 @@ const presents = [
    }]
    ;
 
-   module.exports = presents;
+  
+
+module.exports = presents;
